@@ -1,0 +1,64 @@
+.profile-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 4vw;
+    opacity: 1;
+    transition: opacity ease-in 0.2s;
+    div,
+    h1 {
+        font-size: 10vw;
+        text-align: center;
+        line-height: 10vw;
+    }
+    h2 {
+        font-size: 4vw;
+        font-weight: bold;
+        margin: 0 1vw 1vw;
+    }
+    &.hide {
+        opacity: 0;
+    }
+
+    .profile-pic {
+        display: flex;
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .description {
+        font-size: 3vh;
+        max-width: 70%;
+    }
+
+    @media (min-width: 800px) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+        }
+
+        .profile-name {
+            padding-left: 0;
+            font-size: 4vw;
+            line-height: 4vw;
+        }
+        h2 {
+            font-size: 2.5vw;
+        }
+
+        .description {
+            font-size: 4vh;
+        }
+    }
+
+    @media (max-width: 799px) {
+        & {
+            max-width: 90vw;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import url('./styles/theme.scss');
+
+@import url(https://db.onlinewebfonts.com/c/9a9ee05fac2f147530775797682ce685?family=Glipervelz+Regular);
+
+@font-face {
+    font-family: "Glipervelz Regular";
+    src: url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.eot");
+    src: url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/9a9ee05fac2f147530775797682ce685.svg#Glipervelz Regular")format("svg");
+}
+
+:root {
+  font-family: ui-monospace, signika, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rounded { 
+  border-radius: 50%;
+  overflow: hidden;
+}
+.no-margin {margin: 0}
+.text-center { text-align: center }
+.size-regular { font-size: 18px }
+.size-medium { font-size: 24px }
+
+.pointer {
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

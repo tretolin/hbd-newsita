@@ -1,0 +1,66 @@
+// Color Theme
+$primary-color: #f1f1e9;
+$secondary-color: #4caf86;
+$dark-color: #333;
+$secondary-color-darker: mix(black, $secondary-color,30%);
+$text-color: #444;
+$link-color: #6f7e76;
+$main-font-color: #2e2929;
+$main-radius: 0% 0% 0% 0%;
+$border-radius: 0%;
+$gap-gallery: 1vh;
+
+// Mixins
+@mixin rounded-hidden($radius: $main-radius) {
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+
+    ::selection {
+        background-color: darken($primary-color, 25%);
+        color: $primary-color;
+    }
+
+    /* Para navegadores que no soportan ::selection */
+    ::-moz-selection {
+        background-color: darken($primary-color, 25%);
+        color: $primary-color;
+    }
+}
+
+a.theme-link {
+    color: $link-color;
+    font-size: 20px;
+    &:hover {
+        color: $secondary-color !important;
+    }
+    &:visited {
+        color: $link-color;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: $primary-color;
+    color: $main-font-color;
+}
+
+button {
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    padding: 1.5vw;
+    background-color: $link-color !important;
+    color:$primary-color;
+    border: 0;
+    transition: background-color .2s ease-in-out;
+
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary-color !important;
+    }
+}

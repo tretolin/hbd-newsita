@@ -1,0 +1,28 @@
+@import "@styles/theme.scss";
+
+.theme-pallete {
+    width:100%;
+    display: flex;
+    gap: 0px;
+    // border: 1px solid;
+    .block {
+        display: inline-block;
+        width: 1vw;
+        height: 1.3vw;
+        & .primary {
+            background: $primary-color;
+        }
+        &.secondary {
+            background-color: $secondary-color;
+        }
+        &.link {
+            background-color: $link-color;
+            &.active {
+                background-color: lighten($link-color, 20%);
+            }
+        }
+        &.font {
+            background-color: $main-font-color;
+        }
+    }
+}

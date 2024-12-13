@@ -1,0 +1,51 @@
+@import "@styles/theme.scss";
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrow {
+        width: 6vw;
+        height: 0;
+        padding: 2vw;
+    }
+    h2 {
+        text-align: center;
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+}
+.project-detail {
+    display: flex;
+    justify-content: center;
+    .project-content-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto 2vw;
+        max-width: 900px;
+
+        h2 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .description {
+            max-width:800%;
+            padding: 1vw;
+            text-align: center;
+            font-size: 1.7vw;
+            font-style: italic;
+        }
+        img {
+        @include rounded-hidden;
+            opacity: 1;
+            width: 100%;
+            &.visible {
+                // height: auto;
+                opacity: 1;
+            }
+        }
+    }
+}
