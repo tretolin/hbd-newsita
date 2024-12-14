@@ -1,15 +1,16 @@
 <script setup>
-import { ref } from "vue";
-
+import { ref, defineProps } from "vue";
 import {
     nibiru,
     forYou,
     postal,
     aboutYou,
 } from "../../biblioteca/books-config.js";
+
 let show = ref(false);
 
 function bookInfo(book) {
+    console.log('BOOK', book.cover)
     return {
         title: book.title,
         cover: book.cover,
@@ -60,7 +61,7 @@ const coverImage = (image) => "url(" + image + ")";
             class="book-item"
             :style="{
                 backgroundImage: coverImage(
-                    book.library + book.folder + book.cover
+                    book.cover
                 ),
             }"
         >

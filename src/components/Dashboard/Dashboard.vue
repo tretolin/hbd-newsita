@@ -1,20 +1,34 @@
 <template>
     <div class="dashboard">
+        <!-- <button @click="changeSelect(1)">1</button>
+        <button @click="changeSelect(2)">2</button>
+        <button @click="changeSelect(3)">3</button>
+        <button @click="changeSelect(4)">4</button>
+        <pre style="color:white">SELECTED: {{ select  }}</pre> -->
         <div class="container">
             <!-- Banner -->
             <!-- <h2>🎂</h2> -->
             <!-- <p><img src="../../assets/images/ale.png" /></p> -->
 
             <!-- Icon Blocks -->
+            <Library v-if="select == 1" change="chamgeSelect"/>
+            <!-- <FlipBook v-if="select == 2" change="chamgeSelect"/> -->
 
-            <Library />
         </div>
     </div>
 </template>
 
 <script setup>
 import { useRouter, useRoute } from "vue-router";
+import { ref } from "vue";
 import Library from "../Books/Library.vue";
+import FlipBook from "../FlipBook/FlipBook.vue";
+
+const select = ref(1);
+
+function changeSelect(newSelect) {
+    select.value = newSelect;
+}
 </script>
 
 <style>

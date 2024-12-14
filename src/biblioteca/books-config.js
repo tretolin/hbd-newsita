@@ -6,7 +6,7 @@ export const nibiru =  {
     library: library,
     folder:"nibiru/",
     title: "Un nibiru en la Tierra",
-    cover: "cover.jpg",
+    cover: "https://64.media.tumblr.com/08013a30ac2f9a080d43b9c40efceaa5/0aec7b6b49fb61bc-35/s640x960/80317d6c9bc53210d9dc41ad0a724cf0e183e262.jpg",
     pages:[
         "https://64.media.tumblr.com/c155b83a0eb147dee63ec6e33c8ddff8/f403528dc1808846-86/s640x960/62fd211b1cf10ded60d3e53ec595c4753a7f8b0f.jpg",
         "https://64.media.tumblr.com/20e13db25e0a37a85e6437bba9cd3a52/f403528dc1808846-13/s640x960/b7fe677f1343c3c3ee08214915b1c347d5c6d5fe.jpg",
@@ -40,7 +40,7 @@ export const forYou =  {
     library: library,
     folder:"forYou/",
     title: "Para ti",
-    cover: "cover.jpg",
+    cover: "https://64.media.tumblr.com/68eebfff21869a95bb7c59c37fb7486a/7f757c7ed24827a2-f3/s500x750/d554b45c66f3358c43dfc8687415767d3363d070.jpg",
     pages:[
         "page-01.jpg",
         "page-02.jpg",
@@ -62,7 +62,7 @@ export const postal =  {
     library: library,
     folder:"Cartas/",
     title: "Happy Birthday",
-    cover: "postal-hbd.jpg",
+    cover: "https://64.media.tumblr.com/758c76205cbe10365622b90bacfbf328/55f25fd7dc696876-a8/s1280x1920/9c773f9bf2168db9cb45e8b05ad73d10beeb5f49.jpg",
     pages:[
         "carta-hbd.jpg",
     ]
@@ -75,7 +75,7 @@ export const aboutYou=  {
     library: library,
     folder:"Cartas/",
     title: "Lo que pienso",
-    cover: "believe.jpg",
+    cover: "https://64.media.tumblr.com/999853e8561f5f30ee6b38f758c46a21/86c7946089ae4814-a4/s500x750/4dd79167d59dea5170a99d871368ece460bd4560.jpg",
     pages:[
         "xfile.jpg",
     ]
