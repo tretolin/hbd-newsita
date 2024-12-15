@@ -1,5 +1,6 @@
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref } from "vue";
+
 import {
     nibiru,
     forYou,
@@ -10,7 +11,6 @@ import {
 let show = ref(false);
 
 function bookInfo(book) {
-    console.log('BOOK', book.cover)
     return {
         title: book.title,
         cover: book.cover,
@@ -34,6 +34,10 @@ function path(book) {
     }
 }
 
+function showPage(id) {
+    // change(id);
+}
+
 // RESIZE
 onResize();
 window.onresize = onResize;
@@ -54,18 +58,26 @@ const coverImage = (image) => "url(" + image + ")";
         espero y te guste</i
     >
     <div class="container-books">
-        <a
+        <router-link
+            v-for="(book, index) in books"
+            :index="index"
+            class="book-item"
+            :style="{
+                backgroundImage: coverImage(book.cover),
+            }"
+            to="/libro/1"
+        >
+        </router-link>
+        <!-- <a
             :href="path(book) + book.id"
             v-for="(book, index) in books"
             :index="index"
             class="book-item"
             :style="{
-                backgroundImage: coverImage(
-                    book.cover
-                ),
+                backgroundImage: book.cover,
             }"
         >
-        </a>
+        </a> -->
     </div>
 </template>
 

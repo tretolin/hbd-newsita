@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     };
-    
+
     document.querySelectorAll(".book").forEach(flipBook);
 });

@@ -1,17 +1,36 @@
 <script setup>
+import {onMounted} from 'vue';
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import "./flipBook";
 import { nibiru, forYou } from "../../biblioteca/books-config.js"
 import GoHome from './GoHome.vue';
-console.log('%cTRACK', "color:yellow");
+// console.log('%cTRACK', "color:yellow");
+
+onMounted(() => {
+    console.log('MOUNTED')
+    const flipBook = (elBook) => {
+        elBook.style.setProperty("--c", 0); // Set current page
+        elBook.querySelectorAll(".page").forEach((page, idx) => {
+            page.style.setProperty("--i", idx);
+            page.addEventListener("click", (evt) => {
+                if (evt.target.closest("a")) return;
+                const curr = evt.target.closest(".back") ? idx : idx + 1;
+                elBook.style.setProperty("--c", curr);
+            });
+        });
+    };
+
+    document.querySelectorAll(".book").forEach(flipBook);
+})
+
 const route = useRoute();
 const id = route.params.id; // Access the id parameter
 const allBooks = [nibiru, forYou]
 const bookSelected = id;
 const findBook = allBooks.filter( (book) => book.id == id);
 const bookData = findBook.length ? findBook[0] : window.location.href = "/404"
-console.log(bookData)
+// console.log(bookData)
 let isSingle = ref(false);
 let size = ref({ transform: "scale(1.3)" });
 let show = ref(false);
@@ -19,26 +38,25 @@ const flip = () => (isSingle.value = !isSingle.value);
 
 // PATH PAGE GENERATOR
 function pathPage(image) {
-    return bookData.library + bookData.folder+image;
+    return image;
+    // return bookData.library + bookData.folder+image;
 }
 
 // GROUP PAGES
 function groupPages(list) {
     let pages = [];
     for (let i = 1; i < bookData.pages.length; i += 2) {
-        console.log('%cPAGES ', 'color:yellow', pages)
+        // console.log('%cPAGES ', 'color:yellow', pages)
         pages.push(bookData.pages.slice(i, i + 2));
     }
     return pages;
 }
 // BOOK SCALE
 const onResize = () => {
-    console.log('RESIZE')
-    console.log(window.innerHeight, window.innerWidth);
     let newSize = window.innerWidth / 500;
     let max = 1.35;
     setTimeout(() => {
-        console.log('show')
+        // console.log('show')
         show.value = true;
     }, 200);
     // size.value = {
@@ -62,7 +80,7 @@ window.onresize = onResize;
             <div class="book">
                 <div class="page">
                     <div class="front">
-                        <img :src="(bookData.library + bookData.folder + bookData.cover)" alt="book.title" />
+                        <img :src="(bookData.cover)" alt="book.title" />
                     </div>
                     <div class="back">
                         <img :src="pathPage(bookData.pages[0])" alt="" />
