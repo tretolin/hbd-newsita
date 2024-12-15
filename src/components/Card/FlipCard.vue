@@ -1,9 +1,26 @@
 <script setup>
 import { useRoute } from "vue-router";
+import {onMounted} from 'vue';
 import { ref } from "vue";
 import "./flipBook.js";
 import { postal, aboutYou } from "../../biblioteca/books-config.js";
 import GoHome from "../FlipBook/GoHome.vue";
+
+onMounted(() => {
+    const flipBook = (elBook) => {
+        elBook.style.setProperty("--c", 0); // Set current page
+        elBook.querySelectorAll(".page").forEach((page, idx) => {
+            page.style.setProperty("--i", idx);
+            page.addEventListener("click", (evt) => {
+                if (evt.target.closest("a")) return;
+                const curr = evt.target.closest(".back") ? idx : idx + 1;
+                elBook.style.setProperty("--c", curr);
+            });
+        });
+    };
+
+    document.querySelectorAll(".book").forEach(flipBook);
+})
 
 const route = useRoute();
 const id = route.params.id; // Access the id parameter
@@ -28,7 +45,7 @@ let show = ref(false);
 const flip = () => (isSingle.value = !isSingle.value);
 let book = ref({
     title: bookData.title,
-    cover: library + "Cartas/postal-hbd.jpg",
+    cover: bookData.cover,
     credits: "carta-hbd.jpg",
     // cover: "https://64.media.tumblr.com/c155b83a0eb147dee63ec6e33c8ddff8/33f540c7da285e66-72/s640x960/99c3a5ecfbc00b678ba2fe688fe8c8fd693b62bb.jpg",
     backCover: "",
@@ -38,7 +55,7 @@ let book = ref({
 
 // PATH PAGE GENERATOR
 function pathPage(image) {
-    return library + folder + image;
+    return image;
 }
 
 // GROUP PAGES
@@ -72,7 +89,7 @@ window.onresize = onResize;
     <!-- <div v-if="bookData.id == 4" style="position:absolute; right:3vw; top: 3vw; cursor:pointer; z-index: 1000">
         <button @click="lang = !lang" class="lang" >{{lang ? 'Español' : 'Nibiru'}}</button>
     </div> -->
-
+    <pre>show:::: s{{ show }}</pre>
     <div class="content-page" :style="size" :class="[show ? 'show' : '']">
         <div class="container" id="container">
             <p>{{ bookData.title }}</p>
@@ -80,11 +97,7 @@ window.onresize = onResize;
                 <div class="page">
                     <div class="front">
                         <img
-                            :src="
-                                bookData.library +
-                                bookData.folder +
-                                bookData.cover
-                            "
+                            :src="bookData.cover"
                             alt="book.title"
                         />
                     </div>
@@ -95,18 +108,6 @@ window.onresize = onResize;
                     </div>
                 </div>
 
-                <!-- <div
-                    v-for="(page, index) in groupPages(book.pages)"
-                    class="page"
-                    :key="index"
-                >
-                    <div class="front">
-                        <img :src="pathPage(page[0])" alt="Img 2" />
-                    </div>
-                    <div class="back">
-                        <img :src="pathPage(page[1])" alt="Back 1" />
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>

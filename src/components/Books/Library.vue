@@ -14,7 +14,7 @@ function bookInfo(book) {
     return {
         title: book.title,
         cover: book.cover,
-        url: book.type == "card" ? "carta/" : "libro/" + book.id,
+        url: book.type == "card" ? "carta/" : "libro/",
     };
 }
 
@@ -26,13 +26,7 @@ const onResize = () => {
     }, 200);
 };
 
-function path(book) {
-    if (book.type == "carta") {
-        return "carta/";
-    } else {
-        return "libro/";
-    }
-}
+const path = (book) => (book.type == 'carta' ? '/carta/':'/libro/')+book.id
 
 function showPage(id) {
     // change(id);
@@ -65,19 +59,9 @@ const coverImage = (image) => "url(" + image + ")";
             :style="{
                 backgroundImage: coverImage(book.cover),
             }"
-            to="/libro/1"
+            :to="(path(book))"
         >
         </router-link>
-        <!-- <a
-            :href="path(book) + book.id"
-            v-for="(book, index) in books"
-            :index="index"
-            class="book-item"
-            :style="{
-                backgroundImage: book.cover,
-            }"
-        >
-        </a> -->
     </div>
 </template>
 

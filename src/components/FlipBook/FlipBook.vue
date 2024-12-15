@@ -8,7 +8,6 @@ import GoHome from './GoHome.vue';
 // console.log('%cTRACK', "color:yellow");
 
 onMounted(() => {
-    console.log('MOUNTED')
     const flipBook = (elBook) => {
         elBook.style.setProperty("--c", 0); // Set current page
         elBook.querySelectorAll(".page").forEach((page, idx) => {

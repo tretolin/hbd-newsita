@@ -42,17 +42,19 @@ export const forYou =  {
     title: "Para ti",
     cover: "https://64.media.tumblr.com/68eebfff21869a95bb7c59c37fb7486a/7f757c7ed24827a2-f3/s500x750/d554b45c66f3358c43dfc8687415767d3363d070.jpg",
     pages:[
-        "page-01.jpg",
-        "page-02.jpg",
-        "page-03.jpg",
-        "page-04.jpg",
-        "page-06.jpg",
-        "page-07.jpg",
-        "page-08.jpg",
-        "page-09.jpg",
-        "page-10.jpg",
-        "page-11.jpg",
-        "page-12.jpg",
+        "https://64.media.tumblr.com/578296eee50d968810fdf1fff2fd724a/5ef0f704bd9052c9-5b/s1280x1920/13c7fa7804f1913c82ebf3ed429fabfd14863fe4.jpg",
+        "https://64.media.tumblr.com/a306b263d69037ec4b6f64d345e26833/5ef0f704bd9052c9-98/s1280x1920/db3cace6984de434e1b275c68d8c5befefa4a6ab.jpg",
+        "https://64.media.tumblr.com/135422c9f2da72777482114293fa85d1/5ef0f704bd9052c9-ec/s1280x1920/4a96a1047592d1ce1bd0d0780ae56055898dba59.jpg",
+        "https://64.media.tumblr.com/61ad2a4d865961b7c33454f878380fea/5ef0f704bd9052c9-6f/s1280x1920/700b34de625ecaafc3f7d194c7e1ef3d932101ed.jpg",
+        "https://64.media.tumblr.com/f16ab1ce0fbfed00e475b52d4b4c4583/5ef0f704bd9052c9-03/s1280x1920/4d54746ad453549baadc8ef5e1214d4d9457ce46.jpg",
+        "https://64.media.tumblr.com/2d07dc9fb8a8686ef1c265b447d900e9/5ef0f704bd9052c9-44/s1280x1920/7b9121cbed4d4f0486b05cea22776259dd7b1851.jpg",
+        "https://64.media.tumblr.com/06f0826f7de4ed7b2fffa2eea20e4997/5ef0f704bd9052c9-c5/s1280x1920/52755fa4b5fc0c4426e2f0dbddc79098934762d5.jpg",
+        "https://64.media.tumblr.com/cba6ae628870ba7b6c28f128929d11d1/5ef0f704bd9052c9-b4/s1280x1920/8a190fe83dd67164b9fe5a42981a142d002f366d.jpg",
+        "https://64.media.tumblr.com/b6633fe8d95ad4d86d8d049781819a51/5ef0f704bd9052c9-6e/s1280x1920/c331776d839bea6adbe8565c68b99754f548f5e6.jpg",
+        "https://64.media.tumblr.com/7ca91105b3cd93f59d4f909258bc0ac8/5ef0f704bd9052c9-4d/s1280x1920/77b7dcd661e36b9b073aabc9b720da0feed63fb0.jpg",
+        "https://64.media.tumblr.com/cc5cd4cf86b6e4709d20aa99821f40a3/5ef0f704bd9052c9-29/s1280x1920/bb8eea23970afdcd9344c3587a50fcc6054b815d.jpg",
+        "https://64.media.tumblr.com/97665f947d2ba623e1face25b3e8113f/5ef0f704bd9052c9-24/s1280x1920/45d9f58ed0a9b2026c78d734ff89a61a44b5fd8c.pnj",
+        "https://64.media.tumblr.com/a6e3d08052575f9a4c90b5ad62b7d4bb/5ef0f704bd9052c9-7b/s640x960/44468007b1980f05d3ecbefbc501f43ae397ce6e.jpg",
     ]
 }
 export const postal =  {
@@ -64,7 +66,7 @@ export const postal =  {
     title: "Happy Birthday",
     cover: "https://64.media.tumblr.com/758c76205cbe10365622b90bacfbf328/55f25fd7dc696876-a8/s1280x1920/9c773f9bf2168db9cb45e8b05ad73d10beeb5f49.jpg",
     pages:[
-        "carta-hbd.jpg",
+        "https://64.media.tumblr.com/2a992a04fd24aa7ec65b38980c5d3d44/443d71336cc7897e-28/s2048x3072/1c864f22a983993c4f8fa8054139199c5628c2ae.jpg",
     ]
 }
 
@@ -77,7 +79,7 @@ export const aboutYou=  {
     title: "Lo que pienso",
     cover: "https://64.media.tumblr.com/999853e8561f5f30ee6b38f758c46a21/86c7946089ae4814-a4/s500x750/4dd79167d59dea5170a99d871368ece460bd4560.jpg",
     pages:[
-        "xfile.jpg",
+        "https://64.media.tumblr.com/8242a40c506059cfd5a67342300ec2f6/443d71336cc7897e-ad/s640x960/7d56d9a84640b730cd5e42bc8d2e382a8e871451.jpg",
     ]
 }
 
