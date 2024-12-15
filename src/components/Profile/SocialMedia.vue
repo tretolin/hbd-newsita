@@ -40,7 +40,6 @@ const hasSocialMedia = (network) => {
     let name =  network.name;
     let hasSocial = social.filter( (s) => name == s.name && s.account);
     let url = hasSocial.length ? hasSocial[0].account : ''; 
-    console.log(url)
     return url;
 } 
 

@@ -76,6 +76,8 @@ body {
     flex-direction: column;
     align-items: center;
     transform: translateX(-0.2vw);
+
+    padding-top: 5vh;
 }
 
 .option {

@@ -4,11 +4,9 @@ import { ref } from "vue";
 import "./flipBook.js";
 import { postal, aboutYou } from "../../biblioteca/books-config.js";
 import GoHome from "../FlipBook/GoHome.vue";
-console.log("cardButton - - - - - - - - -- - - -- - - - - -");
 
 const route = useRoute();
 const id = route.params.id; // Access the id parameter
-console.log('id',id)
 const lang = ref(true);
 const allBooks = [postal, aboutYou];
 const findBook = allBooks.filter((book) => book.id == id);
@@ -18,7 +16,6 @@ const bookData = findBook.length
 const texto = `Ha pasado un año desde que comenzamos a pasar tiempo juntos, no me esperaba encontrar una persona tan especial, pese a mi insolencia desde el primer día fuiste amable, no es difícil darse cuenta del gran corazón que tienes, me enseñaste la diferencia entre durazno y melocotón, me invitaste a acompañarte a San Antonio a pasar unos días contigo y fueron mis días más felices de los últimos años de mi vida. Gracias por compartirme un tiempo de tu vida para estar conmigo en este momento difícil de mi vida, eres una persona eres linda, amable, cariñosa, amistosa, comprensiva, compasiva, empática… podría seguir pero no cabe en esta carta, siendo así  es imposible no quererte, y yo, que aunque estoy un poquito descompuesto de la cabeza y tengo contacto con los extraterrestres se reconocer que eres la persona más especial que he conocido y mi persona favorita de este planeta. Si pudiera pedir un deseo no sería otro que tu vida se reponga y que sanen tus heridas. No importa lo que pase en el futuro, tuve la fortuna de conocerte en este universo, gracias por existir, Te quiero mucho Alexis.
 
 Atte. Luisjavier`;
-console.log(bookData);
 
 // COMPOSITION
 const library = "/src/biblioteca/";
