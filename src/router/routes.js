@@ -11,9 +11,6 @@ const routes = [
     { path: "/", component: Home, title: "Home", name:"home" },
     { path: "/libro/:id", component: BookView, title: "BookView", name:"bookView" },
     { path: "/carta/:id", component: CardView, title: "CardView", name:"cardView" },
-    // { path: "/hbd", component: Home, title: "Home", name:"home" },
-    // { path: "/libro/:id", component: FlipBook, name:"libro", label: "libro" },
-    // { path: "/carta/:id", component: FlipCard, name:"carta", label: "carta" },
     // { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
 
